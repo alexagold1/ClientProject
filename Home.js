@@ -14,16 +14,17 @@ const pageShell = document.querySelector('.page-shell');
 setTimeout(() => {
   fly.style.display = 'none';
   landing.style.display = 'flex';
-  splash.classList.add('fade-out');
+  splash.classList.add('splash-fade');
 
   setTimeout(() => {
+    splash.classList.add('hidden');
     pageShell.classList.remove('hidden');
-  }, 450);
-}, 2500);
+  }, 900);
+}, 1900);
 
 setTimeout(() => {
-  if (splash && !splash.classList.contains('fade-out')) {
-    splash.classList.add('fade-out');
+  if (!splash.classList.contains('hidden')) {
+    splash.classList.add('hidden');
     pageShell.classList.remove('hidden');
   }
-}, 5800);
+}, 6000);
