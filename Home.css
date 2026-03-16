@@ -2,13 +2,15 @@
 * { box-sizing:border-box; }
 .hidden { display:none !important; }
 body { margin:0; font-family:'Trebuchet MS',Arial,sans-serif; background: radial-gradient(circle at 20% 0%, #e9f4ef 0%, #f4efe6 50%, #f2ece3 100%); color:#1d1b17; line-height:1.45; }
-#splash-screen { position:fixed; inset:0; background:#9fd3c7; overflow:hidden; display:flex; justify-content:center; align-items:center; z-index:999; }
-#fly { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%) scale(0.6); width:260px; max-width:40vw; animation:flyPop 0.9s ease-out forwards; border-radius:20px; border:3px solid #fff; box-shadow:0 6px 24px rgba(0,0,0,.22); }
+#splash-screen { position:fixed; inset:0; background:#9fd3c7; overflow:hidden; display:flex; justify-content:center; align-items:center; z-index:999; transition:opacity .4s ease, visibility .4s ease; }
+#splash-screen.fade-out { opacity:0; visibility:hidden; }
+#fly { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%) scale(0.3); width:280px; max-width:45vw; animation:flyPop 2.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; border-radius:20px; border:3px solid #fff; box-shadow:0 6px 24px rgba(0,0,0,.25); }
 #landing-wrapper { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; width:100%; min-height:100vh; position:relative; z-index:10; }
 #landing-logo { width:clamp(260px, 45vw, 450px); height:auto; animation:popIn 0.7s ease-out; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.16); }
-@keyframes flyPop { 0% { transform:translate(-50%, -50%) scale(0.4); opacity:0; }
-  70% { transform:translate(-50%, -50%) scale(1.07); opacity:1; }
-  100% { transform:translate(-50%, -50%) scale(1); opacity:1; } }
+@keyframes flyPop { 0% { transform:translate(-50%, -50%) scale(0.3); opacity:0; }
+  50% { transform:translate(-50%, -50%) scale(1.6); opacity:1; }
+  75% { transform:translate(-50%, -50%) scale(1.35); opacity:1; }
+  100% { transform:translate(-50%, -50%) scale(1.03); opacity:0; } }
 @keyframes popIn { from { transform:scale(0.6); opacity:0; } to { transform:scale(1); opacity:1; } }
 .page-shell { width:min(1100px, calc(100% - 16px)); margin:20px auto; padding:18px; background:var(--surface); border:2px solid #d7c9be; border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,.08); }
 .top-nav { display:flex; align-items:center; justify-content:space-between; border-bottom:1px dashed #d2b8ab; padding-bottom:8px; margin-bottom:12px; gap:10px; flex-wrap:wrap; }

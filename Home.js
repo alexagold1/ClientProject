@@ -14,16 +14,16 @@ const pageShell = document.querySelector('.page-shell');
 setTimeout(() => {
   fly.style.display = 'none';
   landing.style.display = 'flex';
+  splash.classList.add('fade-out');
 
   setTimeout(() => {
-    splash.classList.add('hidden');
     pageShell.classList.remove('hidden');
-  }, 900);
-}, 1300);
+  }, 450);
+}, 2500);
 
 setTimeout(() => {
-  if (!splash.classList.contains('hidden')) {
-    splash.classList.add('hidden');
+  if (splash && !splash.classList.contains('fade-out')) {
+    splash.classList.add('fade-out');
     pageShell.classList.remove('hidden');
   }
-}, 5000);
+}, 5800);
