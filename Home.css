@@ -45,21 +45,64 @@ body { font-family:'Trebuchet MS', Arial, sans-serif; color:var(--text); backgro
 @keyframes fadeAway { from { opacity:1; } to { opacity:0; visibility:hidden; } }
 
 /* PAGE SHELL FULL SCREEN */
-.page-shell { width:100%; max-width:100%; margin:0; padding:0; }
+.page-shell {
+  width:100%;
+  max-width:100%;
+  margin:0 auto;
+  padding:0;
+  border:4px dotted #000;
+  border-radius:14px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.12);
+  background:linear-gradient(180deg, #f8fbff 0%, #ebf3ff 100%);
+  overflow:hidden;
+}
 
 /* TOP NAVIGATION */
 .top-nav {
-  width:100%; display:flex; justify-content:space-between; align-items:center;
-  padding:1rem 3%; background:rgba(255,255,255,0.85); backdrop-filter:blur(5px);
-  position:fixed; top:0; z-index:1000;
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.9rem 1.4rem;
+  background:linear-gradient(120deg, #9fd3c7, #9fd3c7);
+  border-radius:0 0 14px 14px;
+  border-bottom:1px solid #9fd3c7;
+  box-shadow:0 10px 22px rgba(0,0,0,0.24);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  backdrop-filter:blur(4px);
 }
-.logo-row { display:flex; align-items:center; gap:8px; font-weight:800; }
-.logo-circle { width:40px; height:40px; border-radius:50%; background:var(--accent2); display:grid; place-items:center; font-size:1.2rem; font-weight:700; color:var(--primary); }
-nav { display:flex; gap:20px; }
-nav a { text-decoration:none; color:var(--text); font-weight:700; transition:color 0.3s; }
-nav a:hover { color:var(--primary); }
-.social-row { display:flex; gap:6px; }
-.pill { font-size:.74rem; border-radius:8px; border:1px solid var(--border); padding:2px 6px; background:#f9f5ef; }
+.logo-circle { width:46px; height:46px; border-radius:10px; background:#1b3f90; color:#fff; display:grid; place-items:center; font-size:1rem; font-weight:800; letter-spacing:.03em; box-shadow:0 4px 10px rgba(0,0,0,0.18); }
+.brand-name { font-size:1.2rem; color:#fff; text-transform:uppercase; letter-spacing:.08em; }
+nav a { text-decoration:none; color:#fff; font-weight:700; padding:.3rem .15rem; border-bottom:2px solid transparent; transition:0.2s ease; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+nav a:hover { color:#ffe8a3; border-bottom-color:#ffe8a3; }
+nav a.active { color:#ffe8a3; border-bottom-color:#ffe8a3; }
+.pill { font-size:.76rem; border-radius:10px; border:1px solid #c6a59a; padding:4px 8px; background:#fff0e5; color:#3e2d27; font-weight:700; }
+.logo-row { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.03em; font-family:'Courier New', Courier, monospace; color:#3f2d28; }
+.logo-circle { width:46px; height:46px; border-radius:10px; background:#c94f45; color:#fff; display:grid; place-items:center; font-size:1rem; font-weight:800; letter-spacing:.03em; box-shadow:0 4px 10px rgba(0,0,0,0.18); }
+.brand-name { font-size:1.2rem; color:#c94f45; text-transform:uppercase; letter-spacing:.08em; }
+nav { display:flex; gap:24px; font-size:1rem; }
+nav a {
+  text-decoration:none;
+  color:#2f2d28;
+  font-weight:700;
+  padding:.3rem .15rem;
+  border-bottom:2px solid transparent;
+  transition:0.2s ease;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav a:hover { color:#7e2f28; border-bottom-color:#7e2f28; }
+nav a.active { color:#7e2f28; border-bottom-color:#7e2f28; }
+.social-row { display:flex; gap:8px; }
+.pill { font-size:.76rem; border-radius:10px; border:1px solid #c6a59a; padding:4px 8px; background:#fff0e5; color:#3e2d27; font-weight:700; }
+
+/* Keep hero offset from fixed nav */
+.hero-header { margin-top:86px; }
 
 /* HERO */
 .hero-header {
@@ -110,8 +153,15 @@ nav a:hover { color:var(--primary); }
   .hero-content { flex-direction:column; gap:30px; }
   .about-row { flex-direction:column; gap:30px; }
 }
+@media (max-width:700px) {
+  .top-nav { padding:.7rem .8rem; gap:10px; }
+  nav { gap:12px; font-size:.9rem; }
+  .logo-row { gap:6px; }
+  .hero-text h1 { font-size:2.1rem; }
+}
 @media (max-width:580px) {
-  nav { display:none; }
+  .top-nav { flex-wrap:wrap; justify-content:center; gap:.6rem; }
+  nav { width:100%; justify-content:center; gap:10px; flex-wrap:wrap; }
   .cards-grid { grid-template-columns:1fr; }
-  .hero-text h1 { font-size:2rem; }
+  .hero-text h1 { font-size:1.9rem; }
 }
