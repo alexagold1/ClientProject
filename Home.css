@@ -2,13 +2,13 @@
 :root {
   --primary: #b54844;   /* Logo red */
   --secondary: #9fd3c7; /* Teal accent */
-  --bg: #f4efe6;        /* Cream */
-  --surface: #fff;
-  --text: #222;
-  --muted: #59594f;
+  --bg: #f7f1e8;
+  --surface: #fff8ef;
+  --text: #2b2320;
+  --muted: #6b5a53;
   --accent: #c94f45;
   --accent2: #f6e2cb;
-  --border: #d0bcb3;
+  --border: #c6b09d;
 }
 
 /* RESET */
@@ -25,7 +25,7 @@
 body {
   font-family: 'Trebuchet MS', Arial, sans-serif;
   color: var(--text);
-  background: var(--secondary);
+  background: radial-gradient(circle at top left, #daf0ea 0%, #f7f1e8 45%, #f7f1e8 100%);
   line-height: 1.45;
 }
 
@@ -262,7 +262,7 @@ nav a.active {
   min-height: 100vh;
   padding: 7.5rem 2rem 2rem;
   text-align: center;
-  background: linear-gradient(180deg, #f6e2cb 0%, #f6e2cb 10%, var(--secondary) 30%, var(--bg) 100%);
+  background: linear-gradient(180deg, #f6e2cb 0%, #f6e2cb 8%, var(--secondary) 30%, var(--bg) 100%);
 }
 
 .hero-content {
@@ -290,6 +290,22 @@ nav a.active {
   font-size: 3rem;
   margin: 1.2rem 0 1.8rem 0;
   line-height: 1.2;
+  position: relative;
+  max-width: 14ch;
+  background: linear-gradient(135deg, #2b2320 0%, #dd5a51 45%, #f2decf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 18px 35px rgba(43, 35, 32, 0.17);
+}
+
+.hero-text h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 8px;
+  margin: 1.2rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #dd5a51, #f2decf);
 }
 
 .eyebrow {
@@ -366,12 +382,42 @@ nav a.active {
   width: 100%;
   padding: 4rem 2rem;
   text-align: center;
-  background: var(--bg);
+  background: linear-gradient(180deg, #f6e2cb 0%, #f6e2cb 6%, var(--bg) 100%);
 }
 
-.section-header h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-family: 'Georgia', serif;
+  font-size: clamp(2.8rem, 4vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.04em;
+  color: #3f2d28;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 6px;
+  margin: 1rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c94f45, #f6e2cb);
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 auto 2.5rem;
+  max-width: 700px;
+  line-height: 1.7;
 }
 
 .cards-grid {
