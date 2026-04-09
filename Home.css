@@ -143,48 +143,50 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.9rem 1.4rem;
-  background: linear-gradient(120deg, #9fd3c7, #9fd3c7);
-  border-radius: 0 0 14px 14px;
-  border-bottom: 1px dotted #9fd3c7;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.24);
+  padding: 1rem 1.4rem;
+  background: linear-gradient(120deg, #72b5a1 0%, #8dd2c1 100%);
+  border-radius: 0 0 20px 20px;
+  border-bottom: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.16);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
 }
 
 .logo-circle {
-  width: 46px;
-  height: 46px;
-  border-radius: 10px;
-  background: #c94f45;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #dd5a51;
   color: #fff;
   display: grid;
   place-items: center;
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.03em;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
 .brand-name {
-  font-size: 1.2rem;
-  color: #c94f45;
+  font-size: 1.25rem;
+  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .logo-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   font-weight: 800;
   letter-spacing: 0.03em;
   font-family: 'Courier New', Courier, monospace;
-  color: #3f2d28;
+  color: #fff;
 }
 
 nav {
@@ -195,22 +197,17 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #2f2d28;
+  color: #f8f2eb;
   font-weight: 700;
-  padding: 0.3rem 0.15rem;
+  padding: 0.35rem 0.15rem;
   border-bottom: 2px solid transparent;
   transition: 0.2s ease;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav a:hover {
-  color: #7e2f28;
-  border-bottom-color: #7e2f28;
-}
-
+nav a:hover,
 nav a.active {
-  color: #7e2f28;
-  border-bottom-color: #7e2f28;
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,0.9);
 }
 
 .social-row {
