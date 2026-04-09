@@ -29,7 +29,6 @@
 
     <section class="menu-hero">
       <div class="hero-copy">
-        <p class="eyebrow">Fresh Picks</p>
         <h1>Menu made for every craving</h1>
         <p class="hero-text">From smooth lattes to fruity refreshers, our menu brings bright flavor, cozy style, and good vibes in every sip.</p>
         <div class="cta-row">
@@ -43,54 +42,40 @@
       <div class="section-wrapper">
         <h2 class="section-title">Featured Favorites</h2>
         <p class="section-intro">Handpicked drinks that capture our signature style and rich, cozy flavors.</p>
-        <div class="menu-grid">
-          <article class="menu-card fade-in-up">
-            <div class="menu-image">
+        <div class="carousel-wrapper">
+          <button class="carousel-nav prev" aria-label="Previous item">←</button>
+          <div class="carousel-track">
+            <article class="carousel-slide fade-in-up active" data-index="0">
               <img src="imgs/menu1.jpeg" alt="Signature latte" />
-            </div>
-            <div class="menu-copy">
-              <h3>Signature Latte</h3>
-              <p>Velvety espresso, caramel spice, and a creamy oat finish for a cozy pick-me-up.</p>
-              <div class="menu-meta"><span class="price">$6.25</span><span class="tag">Latte</span></div>
-            </div>
-          </article>
+            </article>
 
-          <article class="menu-card fade-in-up">
-            <div class="menu-image">
+            <article class="carousel-slide fade-in-up" data-index="1">
               <img src="imgs/menu2.jpeg" alt="Fresh smoothie" />
-            </div>
-            <div class="menu-copy">
-              <h3>Berry Breeze</h3>
-              <p>Fresh berries, coconut water, and a splash of mint for a bright, refreshing treat.</p>
-              <div class="menu-meta"><span class="price">$5.95</span><span class="tag">Smoothie</span></div>
-            </div>
-          </article>
+            </article>
 
-          <article class="menu-card fade-in-up">
-            <div class="menu-image">
+            <article class="carousel-slide fade-in-up" data-index="2">
               <img src="imgs/menu3.jpeg" alt="House specialty" />
-            </div>
-            <div class="menu-copy">
-              <h3>Matcha Chill</h3>
-              <p>Earthy matcha, creamy almond milk, and a hint of vanilla for a smooth, calming lift.</p>
-              <div class="menu-meta"><span class="price">$6.75</span><span class="tag">Specialty</span></div>
-            </div>
-          </article>
+            </article>
+          </div>
+          <button class="carousel-nav next" aria-label="Next item">→</button>
+        </div>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Go to Signature Latte"></button>
+          <button class="dot" aria-label="Go to Berry Breeze"></button>
+          <button class="dot" aria-label="Go to Matcha Chill"></button>
         </div>
       </div>
     </section>
 
-    <section class="menu-specials" id="specials">
-      <div class="section-wrapper">
-        <div class="specials-card fade-in-up">
-          <div class="specials-copy">
-            <h2>Seasonal Drop</h2>
-            <p>Try our limited-time autumn cooler with cinnamon, chilled coffee, and citrus notes  perfect for cozy afternoons.</p>
-            <a class="btn red" href="#">See the full menu</a>
-          </div>
-        </div>
+    <div class="slide-modal" id="slideModal" aria-hidden="true">
+      <div class="slide-modal-backdrop" id="slideModalBackdrop"></div>
+      <div class="slide-modal-content" role="dialog" aria-modal="true" aria-label="Enlarged menu image">
+        <button class="slide-modal-close" id="modalClose" aria-label="Close enlarged image">✕</button>
+        <img class="slide-modal-image" id="modalImage" src="" alt="" />
       </div>
-    </section>
+    </div>
+
   </div>
+  <script src="Menu.js" defer></script>
 </body>
 </html>
