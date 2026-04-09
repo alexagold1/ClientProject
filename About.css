@@ -161,10 +161,7 @@ nav a.active {
   transform: translateY(-2px);
 }
 
-/* ABOUT HEADER */
-.about-header {
-  width: 100%;
-}
+/* ABOUT HEADER 
 
 /* ANIMATIONS */
 @keyframes fadeIn {
@@ -241,9 +238,8 @@ nav a.active {
 
 /* HERO SECTION */
 .about-hero {
-  margin-top: 86px;
-  padding: 6rem 2rem 8rem 2rem;
-  background: linear-gradient(135deg, var(--secondary), var(--accent2));
+  padding: 8.5rem 2rem 8rem 2rem;
+  background: linear-gradient(180deg, #f6e2cb 0%, #f6e2cb 8%, var(--secondary) 30%, var(--accent2) 100%);
   text-align: center;
   min-height: 50vh;
   display: flex;
@@ -741,8 +737,7 @@ nav a.active {
   }
 
   .about-hero {
-    padding: 4rem 1rem 6rem 1rem;
-    margin-top: 80px;
+    padding: 8.5rem 1rem 6rem 1rem;
   }
 
   .about-hero h1 {

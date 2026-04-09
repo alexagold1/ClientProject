@@ -28,7 +28,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  border: 6px solid #f6e2cb;
+  border: 4px dotted #000;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.12);
   background: linear-gradient(180deg, #fef7ee 0%, #eef7f3 100%);
@@ -141,19 +141,15 @@ nav a.active {
   transform: translateY(-2px);
 }
 
-.menu-header {
-  margin-bottom: 86px;
-}
 
 .menu-hero {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
+  padding: 8.5rem 2rem 8rem 2rem;
+  background: linear-gradient(180deg, #f6e2cb 0%, #f6e2cb 8%, var(--secondary) 30%, var(--accent2) 100%);
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
   align-items: center;
-  min-height: auto;
-  padding: 6rem 2rem 4rem;
-  background: radial-gradient(circle at top right, rgba(255,255,255,0.95), rgba(114,181,161,0.12) 35%, rgba(114,181,161,0.18) 100%);
-  color: var(--text);
+  justify-content: center;
 }
 
 .hero-copy {

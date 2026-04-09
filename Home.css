@@ -252,10 +252,6 @@ nav a.active {
   transform: translateY(-2px);
 }
 
-/* Keep hero offset from fixed nav */
-.hero-header {
-  margin-top: 86px;
-}
 
 /* HERO */
 .hero-header {
@@ -264,10 +260,9 @@ nav a.active {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 7.5rem 2rem 2rem;
   text-align: center;
-  background: linear-gradient(to bottom, var(--secondary), var(--bg));
-  margin-top: 60px; /* nav offset */
+  background: linear-gradient(180deg, #f6e2cb 0%, #f6e2cb 10%, var(--secondary) 30%, var(--bg) 100%);
 }
 
 .hero-content {
