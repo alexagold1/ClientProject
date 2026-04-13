@@ -321,10 +321,10 @@ nav a.active {
 
 .intro {
   max-width: 100%;
-  color: var(--muted);
+  color: black ;
   margin: 0 0 2rem 0;
   line-height: 1.6;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .cta-row {
@@ -378,13 +378,14 @@ nav a.active {
   font-weight: 700;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
-
 /* CUSTOMER FAVORITES */
 .favorites {
   width: 100%;
-  padding: 4rem 2rem;
+  /* Using padding instead of margin to prevent gaps/white bars */
+  padding: 6rem 2rem 4rem 2rem; 
   text-align: center;
-  background: linear-gradient(180deg, #f6e2cb 0%, #f6e2cb 6%, var(--bg) 100%);
+  /* Changed to match the Values section color */
+  background: var(--surface); 
 }
 
 .section-wrapper {
@@ -509,7 +510,9 @@ nav a.active {
 }
 
 .footer-top h3 {
+  font-family: 'Georgia', serif;
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .footer-rows {

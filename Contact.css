@@ -82,7 +82,6 @@ body {
 }
 
 .brand-name {
-  font-family: 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.25rem;
   color: #fff;
   text-transform: uppercase;
@@ -172,10 +171,13 @@ nav a.active {
 }
 
 .hero-subtitle {
-  font-size: 1.4rem;
-  color: var(--muted);
-  font-style: italic;
+  max-width: 100%;
+  color: black;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  font-size: 1.2rem;
 }
+
 
 /* CONTACT SECTION GRID */
 .contact-section {

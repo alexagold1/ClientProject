@@ -298,10 +298,12 @@ nav a.active {
 }
 
 .section-intro {
+  max-width: 100%;
+  color: black;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  font-size: 1.2rem;
   text-align: center;
-  color: var(--muted);
-  font-size: 1.05rem;
-  margin-bottom: 3rem;
 }
 
 /* STORY SECTION */
@@ -333,7 +335,6 @@ nav a.active {
 }
 
 .image-placeholder {
-  background: linear-gradient(135deg, #d6e8e1, #e4f1ea);
   border-radius: 10px;
   display: grid;
   place-items: center;
@@ -358,8 +359,10 @@ nav a.active {
 
 /* VALUES SECTION */
 .values-section {
-  padding: 6rem 2rem;
-  background: linear-gradient(180deg, #f9f7f4 0%, var(--bg) 100%);
+  /* Reduced top padding to 0 so it sits right against the Story section */
+  padding: 0 2rem 6rem 2rem; 
+  /* Changed from #fff0e5 to var(--surface) to match Our Story */
+  background: var(--surface); 
 }
 
 .values-grid {
@@ -683,7 +686,9 @@ nav a.active {
 }
 
 .footer-top h3 {
+   font-family: 'Georgia', serif;
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .footer-rows {
@@ -835,4 +840,11 @@ nav a.active {
   .team-image-box {
     height: 120px;
   }
+}
+.intro {
+  max-width: 100%;
+  color: black;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  font-size: 1.2rem;
 }
