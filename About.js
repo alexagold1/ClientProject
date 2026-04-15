@@ -115,3 +115,14 @@ window.addEventListener('scroll', () => {
     hero.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
   }
 });
+/* --- Animation Trigger Logic --- */
+window.addEventListener('load', () => {
+  const animatedElements = document.querySelectorAll('.fade-in, .fade-in-up, .fade-in-left, .fade-in-right');
+  
+  animatedElements.forEach((el, index) => {
+    // We add a tiny staggered delay so they don't all pop at once
+    setTimeout(() => {
+      el.classList.add('animate-now');
+    }, index * 100); 
+  });
+});

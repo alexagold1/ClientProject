@@ -1,19 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const observerOptions = {
-    threshold: 0.1
-  };
+/* --- Animation Trigger Logic --- */
+window.addEventListener('load', () => {
+  // Ensure we start at the top on refresh
+  window.scrollTo(0, 0);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Trigger the animation defined in CSS
-        entry.target.style.opacity = "1";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Apply observer to animated elements
-  const animElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
-  animElements.forEach(el => observer.observe(el));
+  const animatedElements = document.querySelectorAll('.fade-in, .fade-in-up, .fade-in-left, .fade-in-right');
+  
+  animatedElements.forEach((el, index) => {
+    // Staggered delay: 0ms for H1, 100ms for subtitle, 200ms for form, etc.
+    setTimeout(() => {
+      el.classList.add('animate-now');
+    }, index * 100); 
+  });
 });
+
+// Optional: Basic Form handling to prevent refresh on demo
+const contactForm = document.querySelector('form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thanks for reaching out! We will get back to you soon.');
+    contactForm.reset();
+  });
+}
