@@ -317,6 +317,7 @@ nav a.active {
   color: var(--muted);
   margin: 0 0 0.5rem 0;
   font-size: 0.95rem;
+  color: black;
 }
 
 .intro {
@@ -616,3 +617,17 @@ nav a.active {
 .animate-now.fade-in { animation: fadeInUp 1.2s ease forwards; }
 .animate-now.fade-in-left { animation: slideInLeft 1.2s ease forwards; }
 .animate-now.fade-in-right { animation: slideInRight 1.2s ease forwards; }
+.video-container {
+  width: 320px; /* Keep the width you wanted */
+  height: auto;  /* Let the height grow to fit the video */
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background-color: transparent; /* Removes the white/black box background */
+}
+
+.video-container video {
+  width: 100%;    /* Fills the 320px width */
+  height: auto;   /* Maintains the tall aspect ratio */
+  display: block; /* Removes tiny gap at bottom */
+}

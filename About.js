@@ -125,4 +125,37 @@ window.addEventListener('load', () => {
       el.classList.add('animate-now');
     }, index * 100); 
   });
+  
+});
+// ================= LIGHTBOX =================
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close-btn');
+
+// Open lightbox
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.classList.remove('hidden');
+    lightboxImg.src = img.src;
+  });
+});
+
+// Close button
+closeBtn.addEventListener('click', () => {
+  lightbox.classList.add('hidden');
+});
+
+// Click outside image
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== lightboxImg) {
+    lightbox.classList.add('hidden');
+  }
+});
+
+// ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    lightbox.classList.add('hidden');
+  }
 });
