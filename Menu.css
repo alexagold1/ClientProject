@@ -172,7 +172,7 @@ nav a.active {
 
 .menu-hero h1 {
   font-family: 'Georgia', serif;
-  font-size: clamp(3rem, 5vw, 5.25rem);
+  font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 1.02;
   letter-spacing: -0.03em;
